@@ -18,4 +18,23 @@
 
 
 ## 查詢Yahoo新聞的粉絲專業看看吧
-![](./assets/yahoo_icon.jpg)
+![](./assets/yahoo_icon.jpg)  
+
+```python
+def testFacebookPageFeedData(page_id, access_token)
+    
+    #建構你的URL字串
+    base = "https://graph.facebook.com/v2.4"
+    node = "/" + page_id + "/feed" # changed
+    parameters = "/?access_token=%s" %access_token
+    url = base + node + parameters
+
+    # 取得資料
+    data = json.loads(request_until_succeed(url))
+    
+    print(json.dumps(data,indent=4,sort_key=True))
+
+testFacebookPageFeedData(page_id, access_token)
+```
+
+如果你覺得要重複撰寫一樣的程式碼太過麻煩，建議你可以直接在`Github`上下載sample code，其中有包含沒一個抓取步驟地介紹以及使用方法，我強烈建議你可以先閱覽一番再進行。
