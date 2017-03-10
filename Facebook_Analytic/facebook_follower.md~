@@ -42,5 +42,3 @@ testFacebookPageFeedData(page_id, access_token)
 首先，我們需要了解如何去存取Facebook的API，然而Facebook的API不是公眾使用，因此它需要透過`access token`來做為使用者認證。一般來說我們獲得的`access token`會很快就會過期，因此就正式開發的條件來說，我們不建議使用。然而我們可以透過一個小技巧來獲取更長時間的`access_token`,就是利用`APP ID`的方式，使用者可以在FB上面建立一個APP應用程式，我們可以因此獲得`App Secret`，透過`App Secret`你可以獲得一個永遠不會過期的`access token`，當然這會存在一些安全風險。因此我們建議您可以單獨創建一個APP來擷取資料，並且重設你的API Secret 如果你已經知道。
 
 如果我們想要去擷取`Yahoo 新聞`的Fanpage 我們可以使用以下的`request`去拜訪該節點，拜訪的url如下: `https://graph.facebook.com/v2.4/nytimes?access_token=XXXXX`
-
-
